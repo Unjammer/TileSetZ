@@ -1,4 +1,6 @@
-﻿namespace TileSetZ
+﻿using System.Windows.Forms;
+
+namespace TileSetZ
 {
     partial class Form1
     {
@@ -67,9 +69,9 @@
             this.groupBox1.Controls.Add(this.rdb_wall);
             this.groupBox1.Controls.Add(this.rdb_floor);
             this.groupBox1.Controls.Add(this.pbx_original);
-            this.groupBox1.Location = new System.Drawing.Point(3, 27);
+            this.groupBox1.Location = new System.Drawing.Point(3, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(171, 255);
+            this.groupBox1.Size = new System.Drawing.Size(147, 263);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tile";
@@ -77,9 +79,9 @@
             // rdb_Roof
             // 
             this.rdb_Roof.AutoSize = true;
-            this.rdb_Roof.Location = new System.Drawing.Point(115, 160);
+            this.rdb_Roof.Location = new System.Drawing.Point(78, 139);
             this.rdb_Roof.Name = "rdb_Roof";
-            this.rdb_Roof.Size = new System.Drawing.Size(50, 19);
+            this.rdb_Roof.Size = new System.Drawing.Size(48, 17);
             this.rdb_Roof.TabIndex = 9;
             this.rdb_Roof.Text = "Roof";
             this.rdb_Roof.UseVisualStyleBackColor = true;
@@ -88,9 +90,9 @@
             // btn_TrimColor
             // 
             this.btn_TrimColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.btn_TrimColor.Location = new System.Drawing.Point(97, 190);
+            this.btn_TrimColor.Location = new System.Drawing.Point(80, 201);
             this.btn_TrimColor.Name = "btn_TrimColor";
-            this.btn_TrimColor.Size = new System.Drawing.Size(54, 25);
+            this.btn_TrimColor.Size = new System.Drawing.Size(46, 22);
             this.btn_TrimColor.TabIndex = 8;
             this.btn_TrimColor.UseVisualStyleBackColor = false;
             this.btn_TrimColor.Click += new System.EventHandler(this.btn_TrimColor_Click);
@@ -98,18 +100,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 195);
+            this.label1.Location = new System.Drawing.Point(17, 205);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 15);
+            this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "Trim Color :";
             // 
             // btn_Generate
             // 
             this.btn_Generate.Enabled = false;
-            this.btn_Generate.Location = new System.Drawing.Point(23, 221);
+            this.btn_Generate.Location = new System.Drawing.Point(17, 228);
             this.btn_Generate.Name = "btn_Generate";
-            this.btn_Generate.Size = new System.Drawing.Size(128, 23);
+            this.btn_Generate.Size = new System.Drawing.Size(110, 20);
             this.btn_Generate.TabIndex = 5;
             this.btn_Generate.Text = "Generate";
             this.btn_Generate.UseVisualStyleBackColor = true;
@@ -119,9 +121,9 @@
             // 
             this.rdb_wall.AutoSize = true;
             this.rdb_wall.Checked = true;
-            this.rdb_wall.Location = new System.Drawing.Point(9, 160);
+            this.rdb_wall.Location = new System.Drawing.Point(8, 139);
             this.rdb_wall.Name = "rdb_wall";
-            this.rdb_wall.Size = new System.Drawing.Size(48, 19);
+            this.rdb_wall.Size = new System.Drawing.Size(46, 17);
             this.rdb_wall.TabIndex = 3;
             this.rdb_wall.TabStop = true;
             this.rdb_wall.Text = "Wall";
@@ -130,9 +132,9 @@
             // rdb_floor
             // 
             this.rdb_floor.AutoSize = true;
-            this.rdb_floor.Location = new System.Drawing.Point(61, 160);
+            this.rdb_floor.Location = new System.Drawing.Point(9, 162);
             this.rdb_floor.Name = "rdb_floor";
-            this.rdb_floor.Size = new System.Drawing.Size(52, 19);
+            this.rdb_floor.Size = new System.Drawing.Size(48, 17);
             this.rdb_floor.TabIndex = 2;
             this.rdb_floor.Text = "Floor";
             this.rdb_floor.UseVisualStyleBackColor = true;
@@ -140,9 +142,9 @@
             // pbx_original
             // 
             this.pbx_original.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbx_original.Location = new System.Drawing.Point(23, 22);
+            this.pbx_original.Location = new System.Drawing.Point(20, 19);
             this.pbx_original.Name = "pbx_original";
-            this.pbx_original.Size = new System.Drawing.Size(128, 128);
+            this.pbx_original.Size = new System.Drawing.Size(110, 111);
             this.pbx_original.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbx_original.TabIndex = 0;
             this.pbx_original.TabStop = false;
@@ -154,7 +156,8 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1228, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1053, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -199,7 +202,7 @@
             // 
             this.pbx_main.Location = new System.Drawing.Point(3, 3);
             this.pbx_main.Name = "pbx_main";
-            this.pbx_main.Size = new System.Drawing.Size(1024, 2048);
+            this.pbx_main.Size = new System.Drawing.Size(878, 1775);
             this.pbx_main.TabIndex = 3;
             this.pbx_main.TabStop = false;
             // 
@@ -210,18 +213,18 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
             this.panel1.Controls.Add(this.pbx_main);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(180, 24);
+            this.panel1.Location = new System.Drawing.Point(155, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1048, 678);
+            this.panel1.Size = new System.Drawing.Size(898, 584);
             this.panel1.TabIndex = 4;
             // 
             // btn_Color1
             // 
             this.btn_Color1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_Color1.BackColor = System.Drawing.Color.Black;
-            this.btn_Color1.Location = new System.Drawing.Point(36, 665);
+            this.btn_Color1.Location = new System.Drawing.Point(31, 576);
             this.btn_Color1.Name = "btn_Color1";
-            this.btn_Color1.Size = new System.Drawing.Size(25, 25);
+            this.btn_Color1.Size = new System.Drawing.Size(21, 22);
             this.btn_Color1.TabIndex = 12;
             this.btn_Color1.UseVisualStyleBackColor = false;
             this.btn_Color1.Click += new System.EventHandler(this.btn_Color1_Click);
@@ -230,9 +233,9 @@
             // 
             this.btn_Color2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_Color2.BackColor = System.Drawing.Color.Lime;
-            this.btn_Color2.Location = new System.Drawing.Point(67, 665);
+            this.btn_Color2.Location = new System.Drawing.Point(57, 576);
             this.btn_Color2.Name = "btn_Color2";
-            this.btn_Color2.Size = new System.Drawing.Size(25, 25);
+            this.btn_Color2.Size = new System.Drawing.Size(21, 22);
             this.btn_Color2.TabIndex = 9;
             this.btn_Color2.UseVisualStyleBackColor = false;
             this.btn_Color2.Click += new System.EventHandler(this.btn_Color2_Click);
@@ -241,9 +244,9 @@
             // 
             this.btn_Color4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_Color4.BackColor = System.Drawing.Color.White;
-            this.btn_Color4.Location = new System.Drawing.Point(129, 665);
+            this.btn_Color4.Location = new System.Drawing.Point(111, 576);
             this.btn_Color4.Name = "btn_Color4";
-            this.btn_Color4.Size = new System.Drawing.Size(25, 25);
+            this.btn_Color4.Size = new System.Drawing.Size(21, 22);
             this.btn_Color4.TabIndex = 10;
             this.btn_Color4.UseVisualStyleBackColor = false;
             this.btn_Color4.Click += new System.EventHandler(this.btn_Color4_Click);
@@ -252,9 +255,9 @@
             // 
             this.btn_Color3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_Color3.BackColor = System.Drawing.Color.Fuchsia;
-            this.btn_Color3.Location = new System.Drawing.Point(98, 665);
+            this.btn_Color3.Location = new System.Drawing.Point(84, 576);
             this.btn_Color3.Name = "btn_Color3";
-            this.btn_Color3.Size = new System.Drawing.Size(25, 25);
+            this.btn_Color3.Size = new System.Drawing.Size(21, 22);
             this.btn_Color3.TabIndex = 11;
             this.btn_Color3.UseVisualStyleBackColor = false;
             this.btn_Color3.Click += new System.EventHandler(this.btn_Color3_Click);
@@ -263,18 +266,18 @@
             // 
             this.btn_Color5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_Color5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btn_Color5.Location = new System.Drawing.Point(5, 665);
+            this.btn_Color5.Location = new System.Drawing.Point(4, 576);
             this.btn_Color5.Name = "btn_Color5";
-            this.btn_Color5.Size = new System.Drawing.Size(25, 25);
+            this.btn_Color5.Size = new System.Drawing.Size(21, 22);
             this.btn_Color5.TabIndex = 13;
             this.btn_Color5.UseVisualStyleBackColor = false;
             this.btn_Color5.Click += new System.EventHandler(this.btn_Color5_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1228, 702);
+            this.ClientSize = new System.Drawing.Size(1053, 608);
             this.Controls.Add(this.btn_Color5);
             this.Controls.Add(this.btn_Color1);
             this.Controls.Add(this.btn_Color3);
@@ -284,8 +287,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximumSize = new System.Drawing.Size(1244, 2096);
-            this.MinimumSize = new System.Drawing.Size(1244, 741);
+            this.MaximumSize = new System.Drawing.Size(1069, 1822);
+            this.MinimumSize = new System.Drawing.Size(1069, 647);
             this.Name = "Form1";
             this.Text = "TileSetZ";
             this.Load += new System.EventHandler(this.Form1_Load);
