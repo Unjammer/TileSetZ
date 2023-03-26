@@ -123,6 +123,66 @@ namespace TileSetZ.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mask_roof_left_bottom {
+            get {
+                object obj = ResourceManager.GetObject("mask_roof_left_bottom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mask_roof_left_middle {
+            get {
+                object obj = ResourceManager.GetObject("mask_roof_left_middle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mask_roof_left_top {
+            get {
+                object obj = ResourceManager.GetObject("mask_roof_left_top", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mask_roof_right_bottom {
+            get {
+                object obj = ResourceManager.GetObject("mask_roof_right_bottom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mask_roof_right_middle {
+            get {
+                object obj = ResourceManager.GetObject("mask_roof_right_middle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mask_roof_right_top {
+            get {
+                object obj = ResourceManager.GetObject("mask_roof_right_top", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mask_street_curbs_blend {
             get {
                 object obj = ResourceManager.GetObject("mask_street_curbs_blend", resourceCulture);

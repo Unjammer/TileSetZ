@@ -136,6 +136,24 @@
   <data name="mask_right_roof" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mask_right_roof.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="mask_roof_left_bottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mask_roof_left_bottom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mask_roof_left_middle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mask_roof_left_middle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mask_roof_left_top" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mask_roof_left_top.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mask_roof_right_bottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mask_roof_right_bottom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mask_roof_right_middle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mask_roof_right_middle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mask_roof_right_top" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mask_roof_right_top.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="mask_street_curbs_blend" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mask _street_curbs_blend.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

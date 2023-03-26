@@ -39,7 +39,6 @@ namespace TileSetZ
             this.btn_Generate = new System.Windows.Forms.Button();
             this.rdb_wall = new System.Windows.Forms.RadioButton();
             this.rdb_floor = new System.Windows.Forms.RadioButton();
-            this.pbx_original = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,22 +46,25 @@ namespace TileSetZ
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pbx_main = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Color1 = new System.Windows.Forms.Button();
             this.btn_Color2 = new System.Windows.Forms.Button();
             this.btn_Color4 = new System.Windows.Forms.Button();
             this.btn_Color3 = new System.Windows.Forms.Button();
             this.btn_Color5 = new System.Windows.Forms.Button();
+            this.rdb_roofs = new System.Windows.Forms.RadioButton();
+            this.pbx_main = new System.Windows.Forms.PictureBox();
+            this.pbx_original = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_original)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_main)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_main)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_original)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rdb_roofs);
             this.groupBox1.Controls.Add(this.rdb_street);
             this.groupBox1.Controls.Add(this.rdb_Roof);
             this.groupBox1.Controls.Add(this.btn_TrimColor);
@@ -83,9 +85,9 @@ namespace TileSetZ
             this.rdb_street.AutoSize = true;
             this.rdb_street.Location = new System.Drawing.Point(69, 162);
             this.rdb_street.Name = "rdb_street";
-            this.rdb_street.Size = new System.Drawing.Size(78, 17);
+            this.rdb_street.Size = new System.Drawing.Size(83, 17);
             this.rdb_street.TabIndex = 10;
-            this.rdb_street.Text = "Street Curb";
+            this.rdb_street.Text = "Street Curbs";
             this.rdb_street.UseVisualStyleBackColor = true;
             // 
             // rdb_Roof
@@ -93,9 +95,9 @@ namespace TileSetZ
             this.rdb_Roof.AutoSize = true;
             this.rdb_Roof.Location = new System.Drawing.Point(69, 139);
             this.rdb_Roof.Name = "rdb_Roof";
-            this.rdb_Roof.Size = new System.Drawing.Size(72, 17);
+            this.rdb_Roof.Size = new System.Drawing.Size(77, 17);
             this.rdb_Roof.TabIndex = 9;
-            this.rdb_Roof.Text = "Roof Wall";
+            this.rdb_Roof.Text = "Roof Walls";
             this.rdb_Roof.UseVisualStyleBackColor = true;
             this.rdb_Roof.CheckedChanged += new System.EventHandler(this.rdb_Roof_CheckedChanged);
             // 
@@ -135,10 +137,10 @@ namespace TileSetZ
             this.rdb_wall.Checked = true;
             this.rdb_wall.Location = new System.Drawing.Point(8, 139);
             this.rdb_wall.Name = "rdb_wall";
-            this.rdb_wall.Size = new System.Drawing.Size(46, 17);
+            this.rdb_wall.Size = new System.Drawing.Size(51, 17);
             this.rdb_wall.TabIndex = 3;
             this.rdb_wall.TabStop = true;
-            this.rdb_wall.Text = "Wall";
+            this.rdb_wall.Text = "Walls";
             this.rdb_wall.UseVisualStyleBackColor = true;
             // 
             // rdb_floor
@@ -146,21 +148,10 @@ namespace TileSetZ
             this.rdb_floor.AutoSize = true;
             this.rdb_floor.Location = new System.Drawing.Point(9, 162);
             this.rdb_floor.Name = "rdb_floor";
-            this.rdb_floor.Size = new System.Drawing.Size(48, 17);
+            this.rdb_floor.Size = new System.Drawing.Size(53, 17);
             this.rdb_floor.TabIndex = 2;
-            this.rdb_floor.Text = "Floor";
+            this.rdb_floor.Text = "Floors";
             this.rdb_floor.UseVisualStyleBackColor = true;
-            // 
-            // pbx_original
-            // 
-            this.pbx_original.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbx_original.Location = new System.Drawing.Point(20, 19);
-            this.pbx_original.Name = "pbx_original";
-            this.pbx_original.Size = new System.Drawing.Size(110, 111);
-            this.pbx_original.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbx_original.TabIndex = 0;
-            this.pbx_original.TabStop = false;
-            this.toolTip1.SetToolTip(this.pbx_original, "Original Texture");
             // 
             // menuStrip1
             // 
@@ -169,7 +160,7 @@ namespace TileSetZ
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1053, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1204, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -210,14 +201,6 @@ namespace TileSetZ
             this.quitToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.quitToolStripMenuItem.Text = "&Quit";
             // 
-            // pbx_main
-            // 
-            this.pbx_main.Location = new System.Drawing.Point(3, 3);
-            this.pbx_main.Name = "pbx_main";
-            this.pbx_main.Size = new System.Drawing.Size(878, 1775);
-            this.pbx_main.TabIndex = 3;
-            this.pbx_main.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
@@ -225,9 +208,9 @@ namespace TileSetZ
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
             this.panel1.Controls.Add(this.pbx_main);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(155, 24);
+            this.panel1.Location = new System.Drawing.Point(160, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(898, 584);
+            this.panel1.Size = new System.Drawing.Size(1044, 584);
             this.panel1.TabIndex = 4;
             // 
             // btn_Color1
@@ -285,11 +268,40 @@ namespace TileSetZ
             this.btn_Color5.UseVisualStyleBackColor = false;
             this.btn_Color5.Click += new System.EventHandler(this.btn_Color5_Click);
             // 
+            // rdb_roofs
+            // 
+            this.rdb_roofs.AutoSize = true;
+            this.rdb_roofs.Location = new System.Drawing.Point(9, 185);
+            this.rdb_roofs.Name = "rdb_roofs";
+            this.rdb_roofs.Size = new System.Drawing.Size(53, 17);
+            this.rdb_roofs.TabIndex = 11;
+            this.rdb_roofs.Text = "Roofs";
+            this.rdb_roofs.UseVisualStyleBackColor = true;
+            // 
+            // pbx_main
+            // 
+            this.pbx_main.Location = new System.Drawing.Point(3, 3);
+            this.pbx_main.Name = "pbx_main";
+            this.pbx_main.Size = new System.Drawing.Size(878, 1775);
+            this.pbx_main.TabIndex = 3;
+            this.pbx_main.TabStop = false;
+            // 
+            // pbx_original
+            // 
+            this.pbx_original.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbx_original.Location = new System.Drawing.Point(20, 19);
+            this.pbx_original.Name = "pbx_original";
+            this.pbx_original.Size = new System.Drawing.Size(110, 111);
+            this.pbx_original.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbx_original.TabIndex = 0;
+            this.pbx_original.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbx_original, "Original Texture");
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1053, 608);
+            this.ClientSize = new System.Drawing.Size(1204, 608);
             this.Controls.Add(this.btn_Color5);
             this.Controls.Add(this.btn_Color1);
             this.Controls.Add(this.btn_Color3);
@@ -299,18 +311,18 @@ namespace TileSetZ
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximumSize = new System.Drawing.Size(1280, 2100);
-            this.MinimumSize = new System.Drawing.Size(1069, 647);
+            this.MaximumSize = new System.Drawing.Size(1220, 2100);
+            this.MinimumSize = new System.Drawing.Size(1220, 647);
             this.Name = "Form1";
             this.Text = "TileSetZ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_original)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_main)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_main)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_original)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,5 +353,6 @@ namespace TileSetZ
         private RadioButton rdb_Roof;
         private Button btn_Color5;
         private RadioButton rdb_street;
+        private RadioButton rdb_roofs;
     }
 }

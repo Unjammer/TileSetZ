@@ -21,10 +21,27 @@ namespace TileSetZ
         Bitmap tile_corner = new Bitmap(128, 256);
         Bitmap tile_floor = new Bitmap(128, 64);
 
+        Bitmap tile_roofLB = new Bitmap(128, 256);
+        Bitmap tile_roofLM = new Bitmap(128, 256);
+        Bitmap tile_roofLT = new Bitmap(128, 256);
+
+        Bitmap tile_roofRB = new Bitmap(128, 256);
+        Bitmap tile_roofRM = new Bitmap(128, 256);
+        Bitmap tile_roofRT = new Bitmap(128, 256);
+
         Bitmap tileLeftMask = new Bitmap(1024, 2048);
         Bitmap tileRightMask = new Bitmap(1024, 2048);
         Bitmap tileCornerMask = new Bitmap(1024, 2048);
         Bitmap tileFloorMask = new Bitmap(1024, 512);
+        
+        Bitmap tileRoofLBMask = new Bitmap(1024, 1536);
+        Bitmap tileRoofLMMask = new Bitmap(1024, 1536);
+        Bitmap tileRoofLTMask = new Bitmap(1024, 1536);
+        Bitmap tileRoofRBMask = new Bitmap(1024, 1536);
+        Bitmap tileRoofRMMask = new Bitmap(1024, 1536);
+        Bitmap tileRoofRTMask = new Bitmap(1024, 1536);
+
+
 
         Bitmap tileTrimMask = new Bitmap(1024, 2048);
         public Form1()
@@ -61,44 +78,98 @@ namespace TileSetZ
         private bool generateTileset()
         {
             try {
-            var image1 = new Bitmap(tileLeftMask);
-            var image2 = new Bitmap(tileRightMask);
-            var image3 = new Bitmap(tileCornerMask);
-
-            var image4 = new Bitmap(tileTrimMask);
-            var result = new Bitmap(image1.Width, image1.Height);
-            using (var g = Graphics.FromImage(result))
-            {
-                g.DrawImage(image1, 0, 0);
-            }
-            using (var g = Graphics.FromImage(result))
-            {
-                var alphaBrush = new SolidBrush(Color.FromArgb(0, 255, 255, 255));
-                g.FillRectangle(alphaBrush, new Rectangle(0, 0, image1.Width, image1.Height));
-                g.DrawImage(image2, 0, 0);
-            }
-
-
-                if (!rdb_Roof.Checked)
+                if (!rdb_roofs.Checked)
                 {
+                    var image1 = new Bitmap(tileLeftMask);
+                    var image2 = new Bitmap(tileRightMask);
+                    var image3 = new Bitmap(tileCornerMask);
+
+                    var image4 = new Bitmap(tileTrimMask);
+                    var result = new Bitmap(image1.Width, image1.Height);
+                    using (var g = Graphics.FromImage(result))
+                    {
+                        g.DrawImage(image1, 0, 0);
+                    }
+                    using (var g = Graphics.FromImage(result))
+                    {
+                        var alphaBrush = new SolidBrush(Color.FromArgb(0, 255, 255, 255));
+                        g.FillRectangle(alphaBrush, new Rectangle(0, 0, image1.Width, image1.Height));
+                        g.DrawImage(image2, 0, 0);
+                    }
+
+
+                    if (!rdb_Roof.Checked)
+                    {
+                        using (var g = Graphics.FromImage(result))
+                        {
+                            var alphaBrush = new SolidBrush(Color.FromArgb(0, 255, 255, 255));
+                            g.FillRectangle(alphaBrush, new Rectangle(0, 0, image1.Width, image1.Height));
+                            g.DrawImage(image3, 0, 0);
+                        }
+                    }
+
+                    using (var g = Graphics.FromImage(result))
+                    {
+                        var alphaBrush = new SolidBrush(Color.FromArgb(0, 255, 255, 255));
+                        g.FillRectangle(alphaBrush, new Rectangle(0, 0, image1.Width, image1.Height));
+                        g.DrawImage(image4, 0, 0);
+                    }
+
+
+                    pbx_main.Image = result;
+                    return true;
+                } else
+                {
+                    var image1 = new Bitmap(tileRoofRBMask);
+                    var image2 = new Bitmap(tileRoofRMMask);
+                    var image3 = new Bitmap(tileRoofRTMask);
+                    var image4 = new Bitmap(tileRoofLBMask);
+                    var image5 = new Bitmap(tileRoofLMMask);
+                    var image6 = new Bitmap(tileRoofLTMask);
+
+
+                    var result = new Bitmap(image1.Width, image1.Height);
+                    using (var g = Graphics.FromImage(result))
+                    {
+                        g.DrawImage(image1, 0, 0);
+                    }
+                    using (var g = Graphics.FromImage(result))
+                    {
+                        var alphaBrush = new SolidBrush(Color.FromArgb(0, 255, 255, 255));
+                        g.FillRectangle(alphaBrush, new Rectangle(0, 0, image1.Width, image1.Height));
+                        g.DrawImage(image2, 0, 0);
+                    }
+
                     using (var g = Graphics.FromImage(result))
                     {
                         var alphaBrush = new SolidBrush(Color.FromArgb(0, 255, 255, 255));
                         g.FillRectangle(alphaBrush, new Rectangle(0, 0, image1.Width, image1.Height));
                         g.DrawImage(image3, 0, 0);
                     }
+
+                    using (var g = Graphics.FromImage(result))
+                    {
+                        var alphaBrush = new SolidBrush(Color.FromArgb(0, 255, 255, 255));
+                        g.FillRectangle(alphaBrush, new Rectangle(0, 0, image1.Width, image1.Height));
+                        g.DrawImage(image4, 0, 0);
+                    }
+
+                    using (var g = Graphics.FromImage(result))
+                    {
+                        var alphaBrush = new SolidBrush(Color.FromArgb(0, 255, 255, 255));
+                        g.FillRectangle(alphaBrush, new Rectangle(0, 0, image1.Width, image1.Height));
+                        g.DrawImage(image5, 0, 0);
+                    }
+
+                    using (var g = Graphics.FromImage(result))
+                    {
+                        var alphaBrush = new SolidBrush(Color.FromArgb(0, 255, 255, 255));
+                        g.FillRectangle(alphaBrush, new Rectangle(0, 0, image1.Width, image1.Height));
+                        g.DrawImage(image6, 0, 0);
+                    }
+                    pbx_main.Image = result;
+                    return true;
                 }
-
-            using (var g = Graphics.FromImage(result))
-            {
-               var alphaBrush = new SolidBrush(Color.FromArgb(0, 255, 255, 255));
-               g.FillRectangle(alphaBrush, new Rectangle(0, 0, image1.Width, image1.Height));
-               g.DrawImage(image4, 0, 0);
-            }
-
-
-                pbx_main.Image = result;
-            return true;
             }
             catch (Exception ex)
             {
@@ -166,21 +237,47 @@ namespace TileSetZ
                             g.DrawImage(tile, new Rectangle(x, y, tileWidth, tileHeight), new Rectangle(0, 0, tileWidth, tileHeight), GraphicsUnit.Pixel);
                         }
                     }
+                    }
                 }
-            }
 
-            if (side == "left")
-            {
-                tileLeftMask = final;
-            } else if (side == "right")
-            {
-                tileRightMask = final;
-            }
-            else if (side == "corner")
-            {
-                tileCornerMask = final;
-            } else
-            {
+                if (side == "left")
+                {
+                    tileLeftMask = final;
+                }
+                else if (side == "right")
+                {
+                    tileRightMask = final;
+                }
+                else if (side == "corner")
+                {
+                    tileCornerMask = final;
+                }
+                else if (side == "LB")
+                {
+                    tileRoofLBMask = final;
+                }
+                else if (side == "LM")
+                {
+                    tileRoofLMMask = final;
+                }
+                else if (side == "LT")
+                {
+                    tileRoofLTMask = final;
+                }
+                else if (side == "RB")
+                {
+                    tileRoofRBMask = final;
+                }
+                else if (side == "RM")
+                {
+                    tileRoofRMMask = final;
+                }
+                else if (side == "RT")
+                {
+                    tileRoofRTMask = final;
+                }
+                else
+                {
                 tileFloorMask= final;
             }
             return true;
@@ -385,8 +482,6 @@ namespace TileSetZ
                             tileMasked(tile_corner, mask, "corner");
                             if (generateTileset())
                             {
-                                panel1.Width = mask.Width;
-                                panel1.Height = mask.Height;
                                 pbx_main.Width = mask.Width;
                                 pbx_main.Height = mask.Height;
 
@@ -406,8 +501,6 @@ namespace TileSetZ
                     if (tileMasked(tile_floor, mask, "floor"))
                     {
                         pbx_main.Image = tileFloorMask;
-                        panel1.Width = mask.Width;
-                        panel1.Height = mask.Height;
                         pbx_main.Width = mask.Width;
                         pbx_main.Height = mask.Height;
                         pbx_main.Visible = true;
@@ -425,8 +518,6 @@ namespace TileSetZ
                     if (tileMasked(tile_floor, mask, "floor"))
                     {
                         pbx_main.Image = tileFloorMask;
-                        panel1.Width = mask.Width;
-                        panel1.Height = mask.Height;
                         pbx_main.Width = mask.Width;
                         pbx_main.Height = mask.Height;
                         pbx_main.Visible = true;
@@ -449,8 +540,6 @@ namespace TileSetZ
                         tileMasked(tile_right, mask, "right");
                             if (generateTileset())
                             {
-                            panel1.Width = mask.Width;
-                            panel1.Height = mask.Height;
                             pbx_main.Width = mask.Width;
                             pbx_main.Height = mask.Height;
                             pbx_main.Visible = true;
@@ -459,6 +548,157 @@ namespace TileSetZ
                     }
                 }
             }
+            else if (rdb_roofs.Checked)
+            {
+                pbx_main.Visible = false;
+                if (tileThumbnailRoof(pbx_original.Image))
+                {
+
+                    Bitmap mask = Resources.mask_roof_left_bottom;
+                    tileMasked(tile_roofLB, mask, "LB");
+                    tile_roofLB.Save("./tile_roofLB.png");
+
+
+                    mask = Resources.mask_roof_left_middle;
+                    tileMasked(tile_roofLM, mask, "LM");
+
+                    mask = Resources.mask_roof_left_top;
+                    tileMasked(tile_roofLT, mask, "LT");
+
+                    mask = Resources.mask_roof_right_bottom;
+                    tileMasked(tile_roofRB, mask, "RB");
+
+                    mask = Resources.mask_roof_right_middle;
+                    tileMasked(tile_roofRM, mask, "RM");
+
+                    mask = Resources.mask_roof_right_top;
+                    tileMasked(tile_roofRT, mask, "RT");
+                    if (generateTileset())
+                    {
+                        pbx_main.Width = mask.Width;
+                        pbx_main.Height = mask.Height;
+
+                        pbx_main.Visible = true;
+                        saveTilesetToolStripMenuItem.Enabled = true;
+                    }
+                }
+            }
+        }
+
+        private bool tileThumbnailRoof(Image tile)
+        {
+            try
+            {
+                Image originalImage = tile;
+
+                Bitmap resizedImage = new Bitmap(72, 114);
+                using (Graphics resizedGraphics = Graphics.FromImage(resizedImage))
+                {
+                    resizedGraphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+                    resizedGraphics.DrawImage(originalImage, new Rectangle(0, 0, 128, 256));
+                }
+
+                Bitmap isometricImage = new Bitmap(128, 128);
+                for (int y = 0; y < resizedImage.Height; y++)
+                {
+                    for (int x = 0; x < resizedImage.Width; x++)
+                    {
+                        int isoX = x;
+                        int isoY = y + (int)Math.Floor((double)x / 32);
+
+                        if (isoX >= 0 && isoX < isometricImage.Width && isoY >= 0 && isoY < isometricImage.Height)
+                        {
+                            Color pixelColor = resizedImage.GetPixel(x, y);
+                            isometricImage.SetPixel(isoX, isoY, pixelColor);
+                        }
+                    }
+                }
+                float angle = -61.2f;
+                double radianAngle = angle / 180.0 * Math.PI;
+                double cosA = Math.Abs(Math.Cos(radianAngle));
+                double sinA = Math.Abs(Math.Sin(radianAngle));
+
+                int newWidth = (int)(cosA * isometricImage.Width + sinA * isometricImage.Height);
+                int newHeight = (int)(cosA * isometricImage.Height + sinA * isometricImage.Width);
+
+                var rotatedBitmap = new Bitmap(newWidth, newHeight);
+                rotatedBitmap.SetResolution(isometricImage.HorizontalResolution, isometricImage.VerticalResolution);
+
+                using (Graphics g = Graphics.FromImage(rotatedBitmap))
+                {
+                    g.TranslateTransform(rotatedBitmap.Width / 2, rotatedBitmap.Height / 2);
+                    g.RotateTransform(angle);
+                    g.TranslateTransform(-isometricImage.Width / 2, -isometricImage.Height / 2);
+                    g.DrawImage(isometricImage, new Point(0, 0));
+                }
+
+                isometricImage = rotatedBitmap;
+                isometricImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
+
+                Bitmap resultingImage = new Bitmap(128, 256);
+                using (Graphics resultingGraphics = Graphics.FromImage(resultingImage))
+                {
+                    resultingGraphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+                    resultingGraphics.DrawImage(isometricImage, new Rectangle(-7, 0, isometricImage.Width + 16, isometricImage.Height - 8), new Rectangle(0, 0, isometricImage.Width, isometricImage.Height), GraphicsUnit.Pixel);
+                }
+                tile_roofLT = resultingImage;
+                tile_roofRT = reversedImage(resultingImage);
+
+                Bitmap resultingImage2 = new Bitmap(128, 256);
+                using (Graphics resultingGraphics = Graphics.FromImage(resultingImage2))
+                {
+                    resultingGraphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+                    resultingGraphics.DrawImage(isometricImage, new Rectangle(-7, 64, isometricImage.Width + 16, isometricImage.Height - 8), new Rectangle(0, 0, isometricImage.Width, isometricImage.Height), GraphicsUnit.Pixel);
+                }
+                tile_roofLM = resultingImage2;
+                tile_roofRM = reversedImage(resultingImage2);
+
+                Bitmap resultingImage3 = new Bitmap(128, 256);
+                using (Graphics resultingGraphics = Graphics.FromImage(resultingImage3))
+                {
+                    resultingGraphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+                    resultingGraphics.DrawImage(isometricImage, new Rectangle(-7, 128, isometricImage.Width + 16, isometricImage.Height - 8), new Rectangle(0, 0, isometricImage.Width, isometricImage.Height), GraphicsUnit.Pixel);
+                }
+                tile_roofLB = resultingImage3;
+                tile_roofRB = reversedImage(resultingImage3);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+
+        private Bitmap reversedImage(Bitmap originalImage)
+        {
+            // Create a new instance of the bitmap
+            Bitmap reversedImage = new Bitmap(originalImage);
+
+            // Flip the image horizontally
+            reversedImage.RotateFlip(RotateFlipType.RotateNoneFlipX);
+
+            // Loop through all pixels in the image and modify the color
+            for (int x = 0; x < reversedImage.Width; x++)
+            {
+                for (int y = 0; y < reversedImage.Height; y++)
+                {
+                    // Get the original color of the pixel
+                    Color pixelColor = reversedImage.GetPixel(x, y);
+                    int red = Math.Max(Math.Min(pixelColor.R - 31, 255), 0);
+                    int green = Math.Max(Math.Min(pixelColor.G - 31, 255), 0);
+                    int blue = Math.Max(Math.Min(pixelColor.B - 31, 255), 0);
+                    Color newColor = Color.FromArgb(pixelColor.A, red, green, blue);
+
+                    // Set the modified color in the new image
+                    reversedImage.SetPixel(x, y, newColor);
+                }
+            }
+
+            // Return the new reversed image
+            return reversedImage;
         }
 
         private void saveTilesetToolStripMenuItem_Click(object sender, EventArgs e)
