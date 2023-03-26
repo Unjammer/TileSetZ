@@ -385,6 +385,11 @@ namespace TileSetZ
                             tileMasked(tile_corner, mask, "corner");
                             if (generateTileset())
                             {
+                                panel1.Width = mask.Width;
+                                panel1.Height = mask.Height;
+                                pbx_main.Width = mask.Width;
+                                pbx_main.Height = mask.Height;
+
                                 pbx_main.Visible = true;
                                 saveTilesetToolStripMenuItem.Enabled = true;
                             }
@@ -401,12 +406,35 @@ namespace TileSetZ
                     if (tileMasked(tile_floor, mask, "floor"))
                     {
                         pbx_main.Image = tileFloorMask;
+                        panel1.Width = mask.Width;
+                        panel1.Height = mask.Height;
+                        pbx_main.Width = mask.Width;
+                        pbx_main.Height = mask.Height;
+                        pbx_main.Visible = true;
+
+                        saveTilesetToolStripMenuItem.Enabled = true;
+                    }
+                }
+            }
+            else if (rdb_street.Checked)
+            {
+                pbx_main.Visible = false;
+                if (tileThumbnailFloor(pbx_original.Image))
+                {
+                    Bitmap mask = Resources.mask_street_curbs_blend;
+                    if (tileMasked(tile_floor, mask, "floor"))
+                    {
+                        pbx_main.Image = tileFloorMask;
+                        panel1.Width = mask.Width;
+                        panel1.Height = mask.Height;
+                        pbx_main.Width = mask.Width;
+                        pbx_main.Height = mask.Height;
                         pbx_main.Visible = true;
                         saveTilesetToolStripMenuItem.Enabled = true;
                     }
                 }
             }
-            else if(rdb_Roof.Checked)
+            else if (rdb_Roof.Checked)
             {
                 pbx_main.Visible = false;
                 if (tileThumbnailWall(pbx_original.Image))
@@ -421,7 +449,11 @@ namespace TileSetZ
                         tileMasked(tile_right, mask, "right");
                             if (generateTileset())
                             {
-                                pbx_main.Visible = true;
+                            panel1.Width = mask.Width;
+                            panel1.Height = mask.Height;
+                            pbx_main.Width = mask.Width;
+                            pbx_main.Height = mask.Height;
+                            pbx_main.Visible = true;
                                 saveTilesetToolStripMenuItem.Enabled = true;
                             }
                     }

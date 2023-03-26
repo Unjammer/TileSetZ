@@ -123,6 +123,16 @@ namespace TileSetZ.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mask_street_curbs_blend {
+            get {
+                object obj = ResourceManager.GetObject("mask_street_curbs_blend", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mask_trim {
             get {
                 object obj = ResourceManager.GetObject("mask_trim", resourceCulture);

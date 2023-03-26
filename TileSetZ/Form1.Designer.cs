@@ -32,6 +32,7 @@ namespace TileSetZ
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdb_street = new System.Windows.Forms.RadioButton();
             this.rdb_Roof = new System.Windows.Forms.RadioButton();
             this.btn_TrimColor = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,6 +63,7 @@ namespace TileSetZ
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rdb_street);
             this.groupBox1.Controls.Add(this.rdb_Roof);
             this.groupBox1.Controls.Add(this.btn_TrimColor);
             this.groupBox1.Controls.Add(this.label1);
@@ -71,26 +73,36 @@ namespace TileSetZ
             this.groupBox1.Controls.Add(this.pbx_original);
             this.groupBox1.Location = new System.Drawing.Point(3, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(147, 263);
+            this.groupBox1.Size = new System.Drawing.Size(147, 294);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tile";
             // 
+            // rdb_street
+            // 
+            this.rdb_street.AutoSize = true;
+            this.rdb_street.Location = new System.Drawing.Point(69, 162);
+            this.rdb_street.Name = "rdb_street";
+            this.rdb_street.Size = new System.Drawing.Size(78, 17);
+            this.rdb_street.TabIndex = 10;
+            this.rdb_street.Text = "Street Curb";
+            this.rdb_street.UseVisualStyleBackColor = true;
+            // 
             // rdb_Roof
             // 
             this.rdb_Roof.AutoSize = true;
-            this.rdb_Roof.Location = new System.Drawing.Point(78, 139);
+            this.rdb_Roof.Location = new System.Drawing.Point(69, 139);
             this.rdb_Roof.Name = "rdb_Roof";
-            this.rdb_Roof.Size = new System.Drawing.Size(48, 17);
+            this.rdb_Roof.Size = new System.Drawing.Size(72, 17);
             this.rdb_Roof.TabIndex = 9;
-            this.rdb_Roof.Text = "Roof";
+            this.rdb_Roof.Text = "Roof Wall";
             this.rdb_Roof.UseVisualStyleBackColor = true;
             this.rdb_Roof.CheckedChanged += new System.EventHandler(this.rdb_Roof_CheckedChanged);
             // 
             // btn_TrimColor
             // 
             this.btn_TrimColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            this.btn_TrimColor.Location = new System.Drawing.Point(80, 201);
+            this.btn_TrimColor.Location = new System.Drawing.Point(80, 232);
             this.btn_TrimColor.Name = "btn_TrimColor";
             this.btn_TrimColor.Size = new System.Drawing.Size(46, 22);
             this.btn_TrimColor.TabIndex = 8;
@@ -100,7 +112,7 @@ namespace TileSetZ
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 205);
+            this.label1.Location = new System.Drawing.Point(17, 236);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 7;
@@ -109,7 +121,7 @@ namespace TileSetZ
             // btn_Generate
             // 
             this.btn_Generate.Enabled = false;
-            this.btn_Generate.Location = new System.Drawing.Point(17, 228);
+            this.btn_Generate.Location = new System.Drawing.Point(17, 259);
             this.btn_Generate.Name = "btn_Generate";
             this.btn_Generate.Size = new System.Drawing.Size(110, 20);
             this.btn_Generate.TabIndex = 5;
@@ -287,7 +299,7 @@ namespace TileSetZ
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximumSize = new System.Drawing.Size(1069, 1822);
+            this.MaximumSize = new System.Drawing.Size(1280, 2100);
             this.MinimumSize = new System.Drawing.Size(1069, 647);
             this.Name = "Form1";
             this.Text = "TileSetZ";
@@ -328,5 +340,6 @@ namespace TileSetZ
         private Button btn_Color1;
         private RadioButton rdb_Roof;
         private Button btn_Color5;
+        private RadioButton rdb_street;
     }
 }
