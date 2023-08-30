@@ -296,7 +296,7 @@ namespace TileSetZ
             Bitmap resizedImage = new Bitmap(64, 193);
             using (Graphics resizedGraphics = Graphics.FromImage(resizedImage))
             {
-                resizedGraphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                resizedGraphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
                 resizedGraphics.DrawImage(originalImage, new Rectangle(0, 0, 64, 193));
             }
             Bitmap isometricImage = new Bitmap(64, 226);
@@ -341,7 +341,7 @@ namespace TileSetZ
             Bitmap resizedImage = new Bitmap(64, 193);
             using (Graphics resizedGraphics = Graphics.FromImage(resizedImage))
             {
-                resizedGraphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                resizedGraphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
                 resizedGraphics.DrawImage(originalImage, new Rectangle(0, 0, 64, 193));
             }
             Bitmap isometricImage = new Bitmap(64, 226);
