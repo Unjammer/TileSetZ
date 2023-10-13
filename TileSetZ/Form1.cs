@@ -408,45 +408,52 @@ namespace TileSetZ
             try
             {
                 Bitmap original = (Bitmap)tile;
-
-                Bitmap resized_tile;
-
-                    int newHeight = 128;
-                    int newWidth = 128;
-                    resized_tile = new Bitmap(original, newWidth, newHeight);
-                    original = resized_tile;
-
+                Bitmap resized_tile = new Bitmap(128, 128);
                 Bitmap isometric = new Bitmap(256, 128);
+                Bitmap resultingImage = new Bitmap(128, 256);
+
+                using (Graphics g = Graphics.FromImage(resized_tile))
+                {
+                    g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+                    g.DrawImage(original, 0, 0, 128, 128);
+                    
+                }
                 Color transparentColor = Color.FromArgb(0, 0, 0, 0);
                 using (Graphics g = Graphics.FromImage(isometric))
                 {
                     g.Clear(transparentColor);
                 }
-                for (int y = 0; y < original.Height; y++)
+
+                for (int y = 0; y < resized_tile.Height; y++)
                 {
-                    for (int x = 0; x < original.Width; x++)
+                    for (int x = 0; x < resized_tile.Width; x++)
                     {
-                        int isoX = x - y + (original.Width);
-                        int isoY = (x + y) / 2;
+                        int isoX = ((x - y) + resized_tile.Width) - 1;
+                        int isoY = ((x + y) / 2);
                         if (isoX >= 0 && isoX < isometric.Width && isoY >= 0 && isoY < isometric.Height)
                         {
-                            Color pixelColor = original.GetPixel(x, y);
+                            Color pixelColor = resized_tile.GetPixel(x, y);
                             isometric.SetPixel(isoX, isoY, pixelColor);
                         }
                     }
                 }
-                Bitmap resized = new Bitmap(isometric, new Size(128, 64));
+                Bitmap resized = new Bitmap(128, 64);
+                using (Graphics g = Graphics.FromImage(resized))
+                {
+                    g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+                    g.DrawImage(isometric, -1, 0, 128, 64);
+                }
 
-                Bitmap resultingImage = new Bitmap(128, 256);
                 using (Graphics resultingGraphics = Graphics.FromImage(resultingImage))
                 {
+                    resultingGraphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
                     resultingGraphics.DrawImage(resized, new Rectangle(0, 192, 128, 64), new Rectangle(0, 0, 128, 64), GraphicsUnit.Pixel);
                 }
 
-
                 tile_floor = resultingImage;
                 return true;
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 return false;
